@@ -108,11 +108,17 @@ const Projects: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { name: 'BioMaps', type: 'Data-driven Site' },
-              { name: 'SchoolLabs', type: 'Educational Platform' },
-              { name: 'TryOn_Studio', type: 'AI virtual Try-on' }
+              { name: 'BioMaps', type: 'Data-driven Site', url: 'https://biomaps.co.ke' },
+              { name: 'SchoolLabs', type: 'Educational Platform', url: 'https://app.schoollabs.cc' },
+              { name: 'TryOn_Studio', type: 'AI virtual Try-on', url: 'https://tryon-studio.netlify.app' }
             ].map((site, i) => (
-              <div key={i} className="group cursor-pointer border border-brand-charcoal bg-brand-black p-6 hover:border-brand-teal/50 transition-colors">
+              <a
+                key={i}
+                href={site.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group cursor-pointer border border-brand-charcoal bg-brand-black p-6 hover:border-brand-teal/50 transition-colors"
+              >
                 <div className="flex justify-between items-start mb-4">
                   <div className="w-10 h-10 bg-brand-charcoal/30 rounded-full flex items-center justify-center text-brand-gray group-hover:text-brand-white group-hover:bg-brand-teal/20 transition-all">
                     <ExternalLink className="w-4 h-4" />
@@ -120,7 +126,7 @@ const Projects: React.FC = () => {
                 </div>
                 <h4 className="font-bold text-lg text-brand-white mb-1">{site.name}</h4>
                 <p className="text-xs text-brand-gray uppercase tracking-wider">{site.type}</p>
-              </div>
+              </a>
             ))}
           </div>
           <p className="text-center text-brand-gray mt-8 text-sm italic">"Clean, functional, fast, and user-first."</p>
