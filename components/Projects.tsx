@@ -110,7 +110,8 @@ const Projects: React.FC = () => {
             {[
               { name: 'BioMaps', type: 'Data-driven Site', url: 'https://biomaps.co.ke' },
               { name: 'SchoolLabs', type: 'Educational Platform', url: 'https://app.schoollabs.cc' },
-              { name: 'TryOn_Studio', type: 'AI virtual Try-on', url: 'https://tryon-studio.netlify.app' }
+              { name: 'TryOn_Studio', type: 'AI virtual Try-on', url: 'https://tryon-studio.netlify.app' },
+              { name: 'ReceiptLabs', type: 'AI Document Intelligence', url: 'https://receiptlabs.com' }
             ].map((site, i) => (
               <a
                 key={i}
